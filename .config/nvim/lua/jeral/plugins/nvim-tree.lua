@@ -10,7 +10,7 @@ return {
 
     nvimtree.setup({
       view = {
-        width = 35,
+        width = 40,
         relativenumber = true,
       },
       -- change folder arrow icons
@@ -32,8 +32,8 @@ return {
               ignored = "◌",
             },
             folder = {
-              arrow_closed = "", -- arrow when folder is closed
-              arrow_open = "", -- arrow when folder is open
+              arrow_closed = " ", -- arrow when folder is closed
+              arrow_open = " ", -- arrow when folder is open
             },
           },
         },
@@ -78,3 +78,4 @@ return {
     vim.api.nvim_set_hl(0, "NvimTreeGitRenamed", { fg = "#56b6c2" }) -- Renombrado
   end
 }
+
