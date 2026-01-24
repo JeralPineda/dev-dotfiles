@@ -25,7 +25,6 @@ return {
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
-     require("vim-react-snippets").lazy_load()
 
     -- agregando icono de Supermaven
     lspkind.init({

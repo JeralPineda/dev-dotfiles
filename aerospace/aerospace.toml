@@ -122,11 +122,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-b = 'workspace B' # for Browser
-    alt-e = 'workspace E' # for File Explorer (Finder)
-    alt-m = 'workspace M' # for Music
-    alt-n = 'workspace N' # for Notes
-    alt-t = 'workspace T' # for Terminal
+    # alt-b = 'workspace B' # for Browser
+    # alt-e = 'workspace E' # for File Explorer (Finder)
+    # alt-m = 'workspace M' # for Music
+    # alt-n = 'workspace N' # for Notes
+    # alt-t = 'workspace T' # for Terminal
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -138,11 +138,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    cmd-ctrl-alt-shift-b = 'move-node-to-workspace B' # for Browser
-    cmd-ctrl-alt-shift-e = 'move-node-to-workspace E' # for File Explorer (Finder)
-    cmd-ctrl-alt-shift-m = 'move-node-to-workspace M' # for Music
-    cmd-ctrl-alt-shift-n = 'move-node-to-workspace N' # for Notes
-    cmd-ctrl-alt-shift-t = 'move-node-to-workspace T' # for Terminal
+    # cmd-ctrl-alt-shift-b = 'move-node-to-workspace B' # for Browser
+    # cmd-ctrl-alt-shift-e = 'move-node-to-workspace E' # for File Explorer (Finder)
+    # cmd-ctrl-alt-shift-m = 'move-node-to-workspace M' # for Music
+    # cmd-ctrl-alt-shift-n = 'move-node-to-workspace N' # for Notes
+    # cmd-ctrl-alt-shift-t = 'move-node-to-workspace T' # for Terminal
    
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -175,16 +175,34 @@ automatically-unhide-macos-hidden-apps = false
 
 # alt-shift-f = 'fullscreen'
 
-[[on-window-detected]]
-    if.app-id = 'com.apple.Safari'
-    if.app-name-regex-substring = 'settings'
-    if.window-title-regex-substring = 'substring'
-    if.workspace = 'workspace-name'
-    if.during-aerospace-startup = true
-    check-further-callbacks = true
-    run = ['move-node-to-workspace B']  # The callback itself
+# [[on-window-detected]]
+#     if.app-id = 'com.apple.Safari'
+#     if.app-name-regex-substring = 'settings'
+#     if.window-title-regex-substring = 'substring'
+#     if.workspace = 'workspace-name'
+#     if.during-aerospace-startup = true
+#     check-further-callbacks = true
+#     run = ['move-node-to-workspace B']  # The callback itself
 
-    [[on-window-detected]]
+[[on-window-detected]]
     if.app-id = 'com.apple.finder'
     check-further-callbacks = true
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.openai.chat'
+    check-further-callbacks = true
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    check-further-callbacks = true
+    run = 'layout tiling'
+
+[workspace-to-monitor-force-assignment]
+1 = "main"        # tu monitor principal
+3 = "main"
+4 = "main"
+
+2 = "secondary"   # monitor externo
+6 = "secondary"
