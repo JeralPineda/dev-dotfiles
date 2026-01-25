@@ -42,3 +42,7 @@ keymap.set("n", "<leader>oh", "<cmd>:Huefy<CR>", { desc = "Open huefy color pick
 
 -- Expandir snippet en modo insert
 vim.api.nvim_set_keymap('i', '<C-l>', '<cmd>lua require("luasnip").expand_or_jump()<CR>', { noremap = true, silent = true })
+
+-- Open HTML file in browser with live-server
+-- npm install -g live-server
+keymap.set("n", "<leader>lh", "<cmd>!live-server %<CR>", { desc = "Open HTML in live-server" })
