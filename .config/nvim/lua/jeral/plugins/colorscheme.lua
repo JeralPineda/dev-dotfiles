@@ -74,5 +74,27 @@ return {
       -- vim.g.moonflyWinSeparator = 2
       -- vim.cmd([[colorscheme moonfly]])
     end,
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    priority = 1000,
+    config = function()
+      require("vscode").setup({
+        transparent = true, -- fondo transparente como los otros
+        italic_comments = false,
+        disable_nvimtree_bg = true,
+        color_overrides = {
+          vscBack = "#1e1e2e", -- opcional: mismo tono que usas en floats
+        },
+        group_overrides = {
+          -- puedes personalizar highlights aquí si quieres
+          -- NormalFloat = { bg = "#1e1e2e" },
+          -- FloatBorder = { fg = "#555555", bg = "#1e1e2e" },
+        }
+      })
+
+      -- activa este tema (comenta los otros)
+      -- vim.cmd("colorscheme vscode")
+    end,
   }
 }
