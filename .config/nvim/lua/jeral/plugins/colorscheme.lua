@@ -47,7 +47,7 @@ return {
           -- dark = { bg = "#23272e" }, -- yellow
         }
       })
-       vim.cmd("colorscheme onedark_dark")
+      --  vim.cmd("colorscheme onedark_dark")
 
        -- Definir los colores de las ventanas de autocompletado (cmp) y LSP
       -- vim.api.nvim_set_hl(0, "CmpPmenu", { bg = "#1e1e2e" }) -- Fondo para el menú de cmp

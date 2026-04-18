@@ -26,3 +26,18 @@ require("lazy").setup({
     notify = false,
   },
 })
+
+-- 🎨 Tema por defecto (onedark-dark, vscode, moonfly, catppuccin-mocha)
+local theme = "onedark_dark" -- cambia aquí cuando quieras
+vim.cmd("colorscheme " .. theme)
+
+-- ⚡ Comando para cambiar tema en caliente
+-- Uso: 
+-- :Theme onedark_dark
+-- :Theme vscode
+-- :Theme moonfly
+-- :Theme catppuccin-mocha
+
+vim.api.nvim_create_user_command("Theme", function(opts)
+  vim.cmd("colorscheme " .. opts.args)
+end, { nargs = 1 })
