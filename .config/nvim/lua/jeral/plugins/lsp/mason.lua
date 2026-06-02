@@ -9,6 +9,7 @@ return {
         "cssls",
         "tailwindcss",
         "svelte",
+        "astro",
         "lua_ls",
         "graphql",
         "emmet_ls",
