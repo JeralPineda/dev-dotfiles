@@ -147,3 +147,6 @@ eval "$(fnm env --use-on-cd)"
 
 # Added by Windsurf
 export PATH="/Users/jeralpineda/.codeium/windsurf/bin:$PATH"
+
+# opencode
+export PATH=/Users/jeralpineda/.opencode/bin:$PATH
