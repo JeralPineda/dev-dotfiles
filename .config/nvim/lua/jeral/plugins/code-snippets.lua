@@ -453,7 +453,6 @@ return {
 
     ls.add_snippets("astro", {
       s("html5", fmt([[
-        <!DOCTYPE html>
         <html lang="en">
           <head>
             <meta charset="UTF-8">
