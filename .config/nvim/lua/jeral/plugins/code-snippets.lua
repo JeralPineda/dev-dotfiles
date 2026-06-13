@@ -526,6 +526,30 @@ return {
           {}
         }};
         ]], { i(1, ""), i(2, "") })),
+
+        s("clg-json", fmt(
+        "console.log('🚀 {} -> #{} ~ {}:', JSON.stringify({}, null, 2));", {
+          f(function(_, snip) return snip.env.TM_FILENAME end),   -- Nombre del archivo
+          f(function(_, snip) return snip.env.TM_LINE_NUMBER end), -- Número de línea
+          f(function() 
+            local selection = vim.fn.getreg('"')
+            return selection ~= "" and selection or "NO_SELECTION"  -- Si no hay selección, muestra "NO_SELECTION"
+          end), -- Inserta la selección visual o un valor predeterminado
+          f(function() return vim.fn.getreg('"') end), -- Inserta la variable seleccionada directamente
+        }
+      )),
+
+       s("clg-line", fmt(
+        "console.log('🚀 {} -> #{} ~ {}:', {});", {
+          f(function(_, snip) return snip.env.TM_FILENAME end),   -- Nombre del archivo
+          f(function(_, snip) return snip.env.TM_LINE_NUMBER end), -- Número de línea
+          f(function() 
+            local selection = vim.fn.getreg('"')
+            return selection ~= "" and selection or "NO_SELECTION"  -- Si no hay selección, muestra "NO_SELECTION"
+          end), -- Inserta la selección visual o un valor predeterminado
+          f(function() return vim.fn.getreg('"') end), -- Inserta la variable seleccionada directamente
+        }
+      )),
       
     }, { key = "typescript", })
 
