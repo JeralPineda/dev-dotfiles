@@ -1,0 +1,29 @@
+# --- FUENTE ---
+[font]
+size = 13.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+# --- COLORES ---
+[colors.primary]
+foreground = "#e0e0e0"
+background = "#060706"
+
+[colors.cursor]
+cursor = "#1ca9d8"
+
+[colors.selection]
+background = "#344768"
+text = "#ffffff"
+
+# --- VENTANA, OPACIDAD Y BLUR (Corregido aquí) ---
+[window]
+decorations = "None" 
+opacity = 0.85
+blur = true 
+
+[window.padding]
+x = 4
+y = 4
