@@ -150,3 +150,5 @@ export PATH="/Users/jeralpineda/.codeium/windsurf/bin:$PATH"
 
 # opencode
 export PATH=/Users/jeralpineda/.opencode/bin:$PATH
+
+. "$HOME/.turso/env"
