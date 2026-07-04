@@ -2,8 +2,8 @@ foreground = e0e0e0
 background = 060706
 
 font-size = 13
-font-family = Cascadia Code PL
-window-decoration = true
+font-family = JetBrainsMono Nerd Font
+window-decoration = none
 background-opacity = 0.90
 background-blur-radius = 95
 
